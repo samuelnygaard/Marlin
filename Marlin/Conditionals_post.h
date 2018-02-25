@@ -972,10 +972,10 @@
     #define _MAX_PROBE_Y (Y_CENTER +  SCARA_PRINTABLE_RADIUS)
   #else
     // Boundaries for Cartesian probing based on bed limits
-    #define _MIN_PROBE_X (max(X_MIN_BED, X_MIN_POS + X_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MIN_PROBE_Y (max(Y_MIN_BED, Y_MIN_POS + Y_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MAX_PROBE_X (min(X_MAX_BED, X_MAX_POS + X_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MAX_PROBE_Y (min(Y_MAX_BED, Y_MAX_POS + Y_PROBE_OFFSET_FROM_EXTRUDER))
+    #define _MIN_PROBE_X (max(X_MIN_BED, X_MIN_POS - X_PROBE_OFFSET_FROM_EXTRUDER))
+    #define _MIN_PROBE_Y (max(Y_MIN_BED, Y_MIN_POS - Y_PROBE_OFFSET_FROM_EXTRUDER))
+    #define _MAX_PROBE_X (min(X_MAX_BED, X_MAX_POS - X_PROBE_OFFSET_FROM_EXTRUDER))
+    #define _MAX_PROBE_Y (min(Y_MAX_BED, Y_MAX_POS - Y_PROBE_OFFSET_FROM_EXTRUDER))
   #endif
 
   // Allow configuration to override these for special purposes
