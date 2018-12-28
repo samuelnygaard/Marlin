@@ -1267,39 +1267,11 @@
   #ifndef RIGHT_PROBE_BED_POSITION
     #define RIGHT_PROBE_BED_POSITION MAX_PROBE_X
   #endif
-<<<<<<< HEAD
-
-  /**
-   * Bed Probing rectangular bounds
-   * These can be further constrained in code for Delta and SCARA
-   */
-  #if ENABLED(DELTA)
-    // Probing points may be verified at compile time within the radius
-    // using static_assert(HYPOT2(X2-X1,Y2-Y1)<=sq(DELTA_PRINTABLE_RADIUS),"bad probe point!")
-    // so that may be added to SanityCheck.h in the future.
-    #define _MIN_PROBE_X (X_CENTER - DELTA_PRINTABLE_RADIUS)
-    #define _MIN_PROBE_Y (Y_CENTER - DELTA_PRINTABLE_RADIUS)
-    #define _MAX_PROBE_X (X_CENTER + DELTA_PRINTABLE_RADIUS)
-    #define _MAX_PROBE_Y (Y_CENTER + DELTA_PRINTABLE_RADIUS)
-  #elif IS_SCARA
-    #define SCARA_PRINTABLE_RADIUS (SCARA_LINKAGE_1 + SCARA_LINKAGE_2)
-    #define _MIN_PROBE_X (X_CENTER - (SCARA_PRINTABLE_RADIUS))
-    #define _MIN_PROBE_Y (Y_CENTER - (SCARA_PRINTABLE_RADIUS))
-    #define _MAX_PROBE_X (X_CENTER +  SCARA_PRINTABLE_RADIUS)
-    #define _MAX_PROBE_Y (Y_CENTER +  SCARA_PRINTABLE_RADIUS)
-  #else
-    // Boundaries for Cartesian probing based on bed limits
-    #define _MIN_PROBE_X (max(X_MIN_BED, X_MIN_POS - X_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MIN_PROBE_Y (max(Y_MIN_BED, Y_MIN_POS - Y_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MAX_PROBE_X (min(X_MAX_BED, X_MAX_POS - X_PROBE_OFFSET_FROM_EXTRUDER))
-    #define _MAX_PROBE_Y (min(Y_MAX_BED, Y_MAX_POS - Y_PROBE_OFFSET_FROM_EXTRUDER))
-=======
   #ifndef FRONT_PROBE_BED_POSITION
     #define FRONT_PROBE_BED_POSITION MIN_PROBE_Y
   #endif
   #ifndef BACK_PROBE_BED_POSITION
     #define BACK_PROBE_BED_POSITION MAX_PROBE_Y
->>>>>>> upstream/1.1.x
   #endif
 #endif
 
