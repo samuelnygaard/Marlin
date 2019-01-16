@@ -136,11 +136,11 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "HICTOP Prusa i3 3DP17"
+#define CUSTOM_MACHINE_NAME "HICTOP Prusa i3 3D"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "34098c8f-82b8-4ca2-b818-d95aabc8af5b"
 
 // @section extruder
 
@@ -608,7 +608,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 389, 94.4962144 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 94.4962144 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1060,7 +1060,7 @@
 
   #define MESH_INSET 10             // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 4       // Don't use more than 15 points per axis, implementation limited.
-  #define GRID_MAX_POINTS_Y 6
+  #define GRID_MAX_POINTS_Y 5
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
   #define UBL_SAVE_ACTIVE_ON_M500   // Save the currently active mesh in the current slot on M500
