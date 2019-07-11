@@ -378,6 +378,7 @@
           tilt_mesh_based_on_probed_grid(true /* true says to do 3-Point leveling */ );
           restore_ubl_active_state_and_leave();
         }
+        do_blocking_move_to_z(Z_CLEARANCE_DEPLOY_PROBE);
         do_blocking_move_to_xy(0.5f * (MESH_MAX_X - (MESH_MIN_X)), 0.5f * (MESH_MAX_Y - (MESH_MIN_Y)));
         report_current_position();
       }
